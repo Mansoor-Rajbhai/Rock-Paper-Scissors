@@ -49,6 +49,7 @@ h1 {
 .moves button:hover {
   opacity: 0.6;
   transform: scale(1.5);
+  cursor: pointer;
 }
 
 .moves-display {
