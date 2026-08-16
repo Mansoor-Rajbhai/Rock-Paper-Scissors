@@ -18,10 +18,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 20px; /* NEW: breathing room on narrow screens */
 }
 
 h1 {
-  font-size: 70px;
+  font-size: clamp(32px, 8vw, 70px); /* CHANGED: scales with screen width */
   margin-top: 20px;
   color: #0f172a; /* Deep Slate */
 }
@@ -30,6 +31,7 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 50px;
+  flex-wrap: wrap; /* NEW: lets buttons wrap instead of overflowing */
 }
 
 .moves button {
@@ -56,7 +58,8 @@ h1 {
   gap: 30px;
   margin-top: 50px;
   font-size: 30px;
-  width: 400px;
+  width: 90%; /* CHANGED: was fixed 400px */
+  max-width: 400px; /* NEW: caps size on large screens */
   color: #475569; /* Slate Text */
   border: 1px solid #e2e8f0;
   border-radius: 12px;
@@ -71,7 +74,8 @@ h1 {
   margin-top: 50px;
   font-size: 20px;
   background-color: #fff;
-  width: 350px;
+  width: 90%; /* CHANGED: was fixed 350px */
+  max-width: 350px; /* NEW */
   height: 70px;
   justify-content: center;
   align-items: center;
@@ -94,7 +98,8 @@ h1 {
 
 .reset_score {
   margin-top: 10px;
-  width: 250px;
+  width: 90%; /* CHANGED: was fixed 250px */
+  max-width: 250px; /* NEW */
   height: 70px;
   font-size: 30px;
   background-color: #fff;
@@ -107,4 +112,30 @@ h1 {
 .reset_score:hover {
   opacity: 0.6;
   transform: scale(0.9);
+}
+
+/* NEW: mobile-specific tweaks below ~480px width */
+@media (max-width: 480px) {
+  .moves {
+    gap: 20px;
+  }
+
+  .moves button {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  .moves-display {
+    font-size: 22px;
+    padding: 0 10px;
+  }
+
+  .score {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 15px;
+    padding: 15px;
+    font-size: 16px;
+  }
 }
