@@ -2,7 +2,7 @@
 
 A clean, minimal Rock Paper Scissors game — built to practice core JavaScript logic, DOM manipulation, and localStorage persistence.
 
-**[▶ Play it live](#)** _(swap this with your GitHub Pages link once it's deployed)_
+**[▶ Play it live](https://mansoor-rajbhai.github.io/Rock-Paper-Scissors/)**
 
 ---
 
@@ -34,7 +34,7 @@ No frameworks, no build tools — just the fundamentals.
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/Mansoor-Rajbhai/Rock-Paper-Scissors.git
    ```
 2. Open `index.html` in your browser. That's it — no install, no dependencies.
 
@@ -50,7 +50,7 @@ This project was a hands-on way to practice:
 
 ## 📸 Preview
 
-_(drop a screenshot or GIF of the game here once it's live!)_
+![Rock Paper Scissors Screenshot](page.png)
 
 ## 📄 License
 
